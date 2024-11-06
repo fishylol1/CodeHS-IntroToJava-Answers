@@ -1,0 +1,4 @@
+public String justFirstAndLast(String name)
+{
+    return name.substring(0,name.indexOf(" ")) + name.substring(name.lastIndexOf(" "));
+}
