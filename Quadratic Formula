@@ -1,0 +1,35 @@
+public class QuadraticFormula extends ConsoleProgram
+{
+    public void run()
+    {
+        // Gets a b and c values.
+        double a = readDouble("Enter a: ");
+        double b = readDouble("Enter b: ");
+        double c = readDouble("Enter c: ");
+        
+        // Calculates Discriminant
+        double bSqd = Math.pow(b, 2);
+        double n4ac = -4.00 * a * c;
+        double inSqrt = bSqd + n4ac;
+        
+        double dscrt = Math.sqrt(inSqrt);
+        
+        // Does the + or - part of the formula.
+        double root1 = (-1 * b + dscrt) / (2 * a);
+        double root2 = (-1 * b - dscrt) / (2 * a);
+        
+        // Prints out the roots depending on the result.
+        if(inSqrt < 0)
+        {
+            System.out.println("There are no real roots.");
+        }
+        else if(dscrt == 0)
+        {
+            System.out.println("There is a double root of " + root1);
+        }
+        else
+        {
+            System.out.println("The roots are " + root1 +  " and " + root2);
+        }
+    }
+}
