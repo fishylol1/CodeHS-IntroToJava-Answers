@@ -1,0 +1,9 @@
+public int productRange(int a, int b)
+{
+    int sum = 1;
+    for(int i = a; i <= b; i++)
+    {
+        sum *= i;
+    }
+    return sum;
+}
