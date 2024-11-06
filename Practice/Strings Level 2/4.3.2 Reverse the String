@@ -1,0 +1,9 @@
+public String reverse(String phrase)
+{
+    String bckwrd = "";
+    for (int i = 1; i <= phrase.length(); i++)
+    {
+        bckwrd += phrase.charAt(phrase.length() - i);
+    }
+    return bckwrd;
+}
