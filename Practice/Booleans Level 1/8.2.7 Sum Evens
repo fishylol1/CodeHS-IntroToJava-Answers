@@ -1,0 +1,17 @@
+public int sumEvens(int x, int y, int z)
+{
+    int sum = 0;
+    if(x % 2 == 0)
+    {
+        sum += x;
+    }
+    if(y % 2 == 0)
+    {
+        sum += y;
+    }
+    if(z % 2 == 0)
+    {
+        sum += z;
+    }
+    return sum;
+}
