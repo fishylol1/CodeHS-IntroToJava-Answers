@@ -1,0 +1,9 @@
+public boolean phraseContainsKey(String phrase, String key)
+{
+    int index = phrase.indexOf(key);
+    if(index == -1)
+    {
+        return false;
+    }
+    return true;
+}
