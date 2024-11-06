@@ -1,0 +1,39 @@
+public class GoldMedalKarel extends Karel
+{
+    
+    public void run()
+    {
+        move();
+        putBall();
+        move();
+        putBall();
+        turnLeft();
+        move();
+        putBall();
+        turnAround();
+        move();
+        turnLeft();
+        move();
+        putBall();
+        turnAround();
+        move();
+        turnRight();
+        move();
+        move();
+        turnRight();
+    }   
+    
+    public void turnAround()
+    {
+        turnLeft();
+        turnLeft();
+    }
+    
+    public void turnRight()
+    {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+
+}
