@@ -1,0 +1,5 @@
+public static double getArea(double base1, double base2, double height)
+{
+    double baseAvg = (base1 + base2) / 2;
+    return baseAvg * height;
+}
