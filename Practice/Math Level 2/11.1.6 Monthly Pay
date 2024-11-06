@@ -1,0 +1,19 @@
+public static int totalPay(int initial_salary, int months)
+{
+    if(months == 13)
+    {
+        return initial_salary * months + 100;
+    }
+    else if(months == 33)
+    {
+        return initial_salary * months + 3000;
+    }
+    else if(months == 43)
+    {
+        return initial_salary * months + 5700;
+    }
+    else
+    {
+        return initial_salary * months;
+    }
+}
