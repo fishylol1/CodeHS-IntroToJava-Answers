@@ -1,0 +1,46 @@
+public class DoubleTennisBallsKarel extends SuperKarel
+{
+    public void run()
+    {
+        move();
+        doubleAll();
+        moveAllBalls();
+        moveToStart();
+    }
+    // After doubling the stack, Karel will move to the start.
+    public void moveToStart()
+    {
+        turnAround();
+        move();
+        move();
+        turnAround();
+    }
+    // This command allows for Karel to double the set amount of balls.
+    public void doubleAll()
+    {
+        while(ballsPresent())
+        {
+            takeBall();
+            move();
+            putBall();
+            putBall();
+            turnAround();
+            move();
+            turnAround();
+        }
+    }
+    
+    public void moveAllBalls()
+    {
+        move();
+        while(ballsPresent())
+        {
+            takeBall();
+            turnAround();
+            move();
+            putBall();
+            turnAround();
+            move();
+        }
+    }
+}
