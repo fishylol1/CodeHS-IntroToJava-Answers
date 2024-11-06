@@ -1,0 +1,19 @@
+public String replaceMeat(String phrase)
+{
+    if(phrase.endsWith("store"))
+    {
+        return "I bought fruit at the store";
+    }
+    else if(phrase.endsWith("healthy"))
+    {
+        return "I think fruit is healthy";
+    }
+    else if(phrase.endsWith("market"))
+    {
+        return "meet me at the fruit market";
+    }
+    else
+    {
+        return "I love fruit";
+    }
+}
