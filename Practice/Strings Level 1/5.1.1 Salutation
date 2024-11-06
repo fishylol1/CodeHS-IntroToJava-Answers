@@ -1,0 +1,6 @@
+public String salutation(String name)
+{
+    int index = name.indexOf(" ");
+    String last = name.substring(index, name.length());
+    return "Mr." + last;
+}
