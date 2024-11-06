@@ -1,0 +1,11 @@
+public String like(String phrase)
+{
+    if(phrase.startsWith("like "))
+    {
+        return phrase;
+    }
+    else
+    {
+        return "like " + phrase;
+    }
+}
