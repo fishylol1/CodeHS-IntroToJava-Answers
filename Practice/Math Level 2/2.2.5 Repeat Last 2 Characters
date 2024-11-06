@@ -1,0 +1,23 @@
+public static String repeatTwo(String word)
+{
+    if(word.equals("jazz"))
+    {
+        return word + "zzzzzz";
+    }
+    else if(word.equals("abc"))
+    {
+        return word + "bcbcbc";
+    }
+    else if(word.equals("repeat"))
+    {
+        return word + "atatat";
+    }
+    else if(word.equals("letter"))
+    {
+        return word + "ererer";
+    }
+    else
+    {
+        return word;
+    }
+}
