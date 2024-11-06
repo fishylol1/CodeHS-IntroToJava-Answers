@@ -1,0 +1,4 @@
+public static double getArea(double radius)
+{
+    return radius * radius * Math.PI;
+}
