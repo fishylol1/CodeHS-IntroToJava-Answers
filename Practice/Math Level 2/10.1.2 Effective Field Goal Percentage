@@ -1,0 +1,11 @@
+public double effectiveFieldGoalPercentage(int fgm2, int fgm3, int fga)
+{
+    if(fgm2 == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return (fgm2 + 1.5 * fgm3) / fga;
+    }
+}
