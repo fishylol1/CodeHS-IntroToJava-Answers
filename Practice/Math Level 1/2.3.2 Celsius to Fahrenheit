@@ -1,0 +1,5 @@
+public double celsiusToFahrenheit(double degrees)
+{
+    double celsiusToFahrenheit = (1.8 * degrees) + 32;
+    return celsiusToFahrenheit;
+}
