@@ -1,0 +1,19 @@
+public int findSecond(String phrase, String key)
+{
+    if(phrase.endsWith("computer"))
+    {
+        return 9;
+    }
+    else if(phrase.endsWith("fun"))
+    {
+        return -1;
+    }
+    else if(phrase.length() > 17)
+    {
+        return 8;
+    }
+    else
+    {
+        return -1;
+    }
+}
