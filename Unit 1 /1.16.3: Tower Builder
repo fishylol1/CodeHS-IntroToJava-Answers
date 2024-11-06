@@ -1,0 +1,36 @@
+public class TowerBuilderKarel extends SuperKarel
+{
+    public void run()
+    {
+        buildTower();
+        while(frontIsClear())
+        {
+            buildTowerTwo();
+        }
+    }
+    // Karel builds a 3 block high tower.
+    public void buildTower()
+    {
+        turnLeft();
+        for (int i = 0; i < 2; i++)
+        {
+            move();
+            putBall();
+        }
+        turnAround();
+        move();
+        move();
+        putBall();
+        turnLeft();
+    }
+    // If there are another 2 or more rows, Karel builds another tower.
+    public void buildTowerTwo()
+    {
+        move();
+        if(frontIsClear())
+        {
+            move();
+            buildTower();
+        }
+    }
+}
