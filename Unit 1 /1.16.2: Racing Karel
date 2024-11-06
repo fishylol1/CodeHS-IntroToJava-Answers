@@ -1,0 +1,44 @@
+public class RacingKarel extends SuperKarel
+{
+    public void run()
+    {
+        sprintToCorner();
+        blockedFront();
+        blockedFront();
+        blockedFront();
+        turnLeft();
+    }
+    // Karel moves to the first corner.
+    public void sprintToCorner()
+    {
+        if(frontIsClear())
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                putBall();
+            }
+            runToEnd();
+        }
+    }
+    // This program allows Karel to put 8 balls, turnLeft, and then sprint.
+    public void blockedFront()
+    {
+        if(frontIsBlocked())
+        {
+            turnLeft();
+            for (int i = 0; i < 8; i++)
+            {
+                putBall();
+            }
+            runToEnd();
+        }
+    }
+    // Karel sprints.
+    public void runToEnd()
+    {
+        while(frontIsClear())
+        {
+            move();
+        }
+    }
+}
