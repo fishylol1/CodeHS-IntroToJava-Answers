@@ -1,0 +1,7 @@
+public String switchWords(String phrase)
+{
+    int s1 = phrase.indexOf(" ");
+    String firstw = phrase.substring(0, s1);
+    String secw = phrase.substring(s1 + 1);
+    return secw + " " + firstw;
+}
