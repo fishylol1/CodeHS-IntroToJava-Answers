@@ -1,0 +1,9 @@
+public double shootingPercentage(int fgm, int fga)
+{
+    double shootingPercentage = (double)fgm / fga;
+    if(fgm == 0)
+    {
+        return 0.0;
+    }
+    return shootingPercentage;
+}
