@@ -1,0 +1,6 @@
+public int findUpperKey(String phrase, String key)
+{
+    String convert = key.toUpperCase();
+    int index = phrase.indexOf(convert);
+    return index;
+}
