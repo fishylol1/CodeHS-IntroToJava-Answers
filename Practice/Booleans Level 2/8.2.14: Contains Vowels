@@ -1,0 +1,13 @@
+public static boolean containsVowels(String word)
+{
+    int v = 0;
+    for(int k = 0; k < word.length(); k++)
+    {
+        char cur = word.charAt(k);
+        if(cur == 'a' || cur == 'A' || cur == 'e' || cur == 'E' || cur == 'i' || cur == 'I' || cur == 'o' || cur == 'O' || cur == 'u' || cur == 'U')
+        {
+            v++;
+        }
+    }
+    return v >= 2;
+}
