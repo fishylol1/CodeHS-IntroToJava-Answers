@@ -1,0 +1,8 @@
+public boolean hasEnoughPaint(int gallons, double squareFeet)
+{
+    if(gallons * 5.0 >= squareFeet)
+    {
+        return true;
+    }
+    return false;
+}
