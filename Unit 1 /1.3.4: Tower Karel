@@ -1,0 +1,23 @@
+public class TowerKarel extends Karel
+{
+
+    public void run()
+    {
+    	move();
+    	turnLeft();
+    	putBall();
+    	move();
+    	putBall();
+    	move();
+    	putBall();
+    	move();
+    	turnRight();
+    }
+    
+    public void turnRight()
+    {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+}
