@@ -1,0 +1,21 @@
+public class RightSideUp extends SuperKarel
+{
+    public void run()
+    {
+        faceEast();
+    }
+    
+    public void faceEast()
+    {
+        if(facingSouth())
+        {
+            turnLeft();
+        }
+        else
+        {
+            turnLeft();
+            turnLeft();
+        }
+    }
+    
+}
