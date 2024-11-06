@@ -1,0 +1,18 @@
+public String grammer(String phrase)
+{
+    int a = phrase.indexOf("a");
+    int e = phrase.indexOf("e");
+    int i = phrase.indexOf("i");
+    int o = phrase.indexOf("o");
+    int u = phrase.indexOf("u");
+    int oo = phrase.indexOf("O");
+    
+    if(a == 2 || e == 2 || i == 2 || o == 2 || u == 2 || oo == 2)
+    {
+        return "An " + phrase.substring(2);
+    }
+    else
+    {
+        return phrase;
+    }
+}
