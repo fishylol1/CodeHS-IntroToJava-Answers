@@ -1,0 +1,4 @@
+public static boolean multipleAs(String word)
+{
+    return word.indexOf("A") != word.lastIndexOf("A") || word.indexOf("a") != word.lastIndexOf("a");
+}
