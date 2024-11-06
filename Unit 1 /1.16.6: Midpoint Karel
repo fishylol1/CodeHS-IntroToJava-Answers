@@ -1,0 +1,29 @@
+public class MidpointKarel extends SuperKarel
+{
+    public void run()
+    {
+        moveToMiddle();
+        putBall();
+    }
+    // Karel moves to the midpoint of the square.
+    public void moveToMiddle()
+    {
+        for(int i = 0; i < 100; i++)
+        {
+            if(frontIsClear())
+            {
+                move();
+            }
+            else
+            {
+                turnAround();
+                for (int i = i/2; i > 0; i--)
+                {
+                    move();
+                }
+                turnAround();
+                break;
+            }
+        }
+    }
+}
