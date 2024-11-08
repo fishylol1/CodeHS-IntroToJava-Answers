@@ -1,0 +1,106 @@
+public class QB
+{
+    private String player;
+    private int attempts;
+    private int completions;
+    private int touchdowns;
+    private int interceptions;
+    private int yards;
+    // default values if the constructor is empty.
+    private static String DEFAULT_PLAYER = "Steve Young";
+    private static int DEFAULT_ATTEMPTS = 461;
+    private static int DEFAULT_COMPLETIONS = 324;
+    private static int DEFAULT_TOUCHDOWNS = 35;
+    private static int DEFAULT_INTERCEPTIONS = 10;
+    private static int DEFAULT_YARDS = 3969;
+    //constructor
+    public QB(String thePlayer, int theAttempts, int theCompletions, int theTouchdowns, int theInterceptions, int theYards)
+    {
+        player = thePlayer;
+        attempts = theAttempts;
+        completions = theCompletions;
+        touchdowns = theTouchdowns;
+        interceptions = theInterceptions;
+        yards = theYards;
+    }
+    //overloading the constructor with our default values.
+    public QB()
+    {
+        player = DEFAULT_PLAYER;
+        attempts = DEFAULT_ATTEMPTS;
+        completions = DEFAULT_COMPLETIONS;
+        touchdowns = DEFAULT_TOUCHDOWNS;
+        interceptions = DEFAULT_INTERCEPTIONS;
+        yards = DEFAULT_YARDS;
+    }
+    // returns the inputs of what the person inputted.
+    public String toString()
+    {
+        return "Player: " + player + "\nAttempts: " + attempts + "\nCompletions: " + completions + "\nTouchdowns: " + touchdowns + "\nInterceptions: " + interceptions + "\nYards: " + yards;
+    }
+    // .equals() method
+    public boolean equals(QB newPlayer)
+    {
+        return player.equals(newPlayer.player) && attempts == newPlayer.attempts && completions == newPlayer.completions && touchdowns == newPlayer.touchdowns && interceptions == newPlayer.interceptions && yards == newPlayer.yards;
+    }
+    
+    public double completionPercent()
+    {
+        double percentage = ((100.0 / (double)attempts) * (double)completions);
+        percentage -= 30;
+        percentage *= 0.05;
+        if (percentage < 0.0)
+        {
+            return 0.0;
+        }
+        else if (percentage > 2.375)
+        {
+            return 2.375;
+        }
+        return percentage;
+    }
+
+    public double ydsPerAtt()
+    {
+        double ydsPer = (double)yards / attempts;
+        ydsPer -= 3.0;
+        ydsPer *= 0.25;
+        if (ydsPer < 0.0)
+        {
+            return 0.0;
+        }
+        else if (ydsPer > 2.375)
+        {
+            return 2.375;
+        }
+        return ydsPer;
+    }
+   
+    public double tdPercent()
+    {
+        double tdPercentage = ((100.0 / (double)attempts) * (double)touchdowns);
+        tdPercentage *= 0.2;
+        if(tdPercentage > 2.375)
+        {
+            return 2.375;
+        }
+        return tdPercentage;
+    }
+   
+    public double intPercent()
+    {
+        double intP = ((100.0 / (double)attempts) * (double)interceptions);
+        intP *= 0.25;
+        intP = 2.375 - intP;
+        if (intP < 0)
+        {
+            return 0.0;
+        }
+        return intP;
+    }
+   
+    public double qbRating()
+    {
+        return (((intPercent() + tdPercent() + ydsPerAtt() + completionPercent()) / 6)*100 );
+    }
+}
