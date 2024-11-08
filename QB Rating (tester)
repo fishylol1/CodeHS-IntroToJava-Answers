@@ -1,0 +1,23 @@
+public class QBTester extends ConsoleProgram
+{
+    public void run()
+    {
+        QB foles = new QB("Nick Foles", 317, 203, 27, 2, 2891);
+        System.out.println(foles);
+        System.out.println("Comp %: " + foles.completionPercent());
+        System.out.println("Yds/att: " + foles.ydsPerAtt());
+        System.out.println("TD %: " + foles.tdPercent());
+        System.out.println("Int %: " + foles.intPercent());
+        System.out.println("Final Rating: " + foles.qbRating());
+        System.out.println();
+        
+        QB young = new QB();
+        System.out.println(young);
+        System.out.println("Comp %: " + young.completionPercent());
+        System.out.println("Yds/att: " + young.ydsPerAtt());
+        System.out.println("TD %: " + young.tdPercent());
+        System.out.println("Int %: " + young.intPercent());
+        System.out.println("Final Rating: " + young.qbRating());
+        System.out.println("\nEqual?: " + foles.equals(young));
+    }
+}
